@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Variables")]
     [SerializeField] private float _acceleration;
     [SerializeField] private float _friction;
-    [SerializeField] private float _runSpeed;
     [SerializeField] private float _airFriction;
     private float _horizontalDir = 1f;
     private float _xInput = 0f;
@@ -32,14 +31,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _rotateSpeed;
     [SerializeField] private float _currentRotateSpeed;
     [SerializeField] private float _currentAngle;
-    [SerializeField] private bool _flightModeActive = false;
     private float _zRotation = 0f;
 
     [Header("Boositng")]
     [SerializeField] private float _boostAcceleration;
     [SerializeField] private float _boostSpeed;
-    [SerializeField] private float _currentBoostSpeed;
-    [SerializeField] private bool _activateBoost = false;
 
     private void Awake()
     {
@@ -73,13 +69,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        CheckForGround();
         DoMovement();
-
-
         DoJump();
         DoRotation();
-
+        CheckForGround();
     }
 
     private void GetMoveInput()
@@ -90,31 +83,18 @@ public class PlayerController : MonoBehaviour
 
         if (!_grounded)
         {
-            if (Input.GetKeyDown(KeyCode.RightControl) || Input.GetKeyDown(KeyCode.Space))
-            {
-                _jetWings.ToggleWingState();
-                _flightModeActive = !_flightModeActive;
-                if (!_flightModeActive)
-                {
-                    _myRigidbody.useGravity = true;
-                }
-            }
-
             if(_yInput == 0f)
             {
                 _myRigidbody.useGravity = true;
             }
             else
             {
-                if (_flightModeActive)
-                {
-                    _myRigidbody.useGravity = false;
-                }
+                _myRigidbody.useGravity = false;
             }
         }
         else
         {
-            if(_jump == false && (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.D)))
+            if(_jump == false && (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)))
             {
                 _jump = true;
             }
@@ -129,7 +109,6 @@ public class PlayerController : MonoBehaviour
         {
             _currentSpeed = Mathf.MoveTowards(_currentSpeed, _boostSpeed, _acceleration);
             _myRigidbody.linearVelocity = Vector3.MoveTowards(_myRigidbody.linearVelocity, _myTransform.forward * _currentSpeed, _boostAcceleration);
-            _jetWings.EnableEmission(true);
         }
         else
         {
@@ -143,7 +122,6 @@ public class PlayerController : MonoBehaviour
             }
             
             _myRigidbody.linearVelocity = new Vector3(_myRigidbody.linearVelocity.x, _myRigidbody.linearVelocity.y, _myRigidbody.linearVelocity.z*0.95f);
-            _jetWings.EnableEmission(false);
         }
     }
 
@@ -180,6 +158,10 @@ public class PlayerController : MonoBehaviour
                     _currentRotateSpeed = Mathf.MoveTowards(_currentRotateSpeed, _xInput * _rotateSpeed, _rotateAccel);
                 }
             }
+            else
+            {
+                _currentRotateSpeed = 0f;
+            }
         }
         else
         {
@@ -188,21 +170,15 @@ public class PlayerController : MonoBehaviour
         Vector3 rotateVel = new Vector3(_currentRotateSpeed, 0f, 0f);
         _currentAngle += _currentRotateSpeed;
         _myRigidbody.rotation = Quaternion.Euler(_currentAngle + _currentRotateSpeed, 0f, _zRotation);
-        print(_myRigidbody.rotation.eulerAngles.z);
     }
 
     public void CheckForGround()
     {
         Vector3 groundCheckPos = _myTransform.position + new Vector3(0f, _groundCheckOffset, 0f);
         _grounded = Physics.CheckSphere(groundCheckPos, _groundCheckRadius, _groundLayer);
-        if (_grounded && _xInput == 0f)
+        if (_grounded)
         {
-            //_horizontalDir = Mathf.Ceil(_myTransform.forward.z);
-            _flightModeActive = false;
             _jetWings.OpenWings(false);
-            _jetWings.EnableEmission(false);
-            _currentBoostSpeed = 0f;
-            
             _currentRotateSpeed = 0f;
             
             if(_horizontalDir > 0)
@@ -217,7 +193,6 @@ public class PlayerController : MonoBehaviour
                 _zRotation = 180f;
                 _myRigidbody.rotation = Quaternion.Euler(_currentAngle, 0f, 180f);
             }
-            _myRigidbody.useGravity = true;
         }
     }
 
