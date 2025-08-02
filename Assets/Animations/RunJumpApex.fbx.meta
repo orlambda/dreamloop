@@ -270,18 +270,18 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Astronaut(Clone)
+    - name: Astronaut 1(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Cube.001
-      parentName: Astronaut(Clone)
+      parentName: Astronaut 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0.000000057601163, z: 0.000000057601163, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Armature
-      parentName: Astronaut(Clone)
+      parentName: Astronaut 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0.000000057601163, z: 0.000000057601163, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
@@ -421,7 +421,12 @@ ModelImporter:
       rotation: {x: 0.31069776, y: 0.10361469, z: -0.27203354, w: 0.90483624}
       scale: {x: 1, y: 1, z: 0.99999994}
     - name: Jet Light
-      parentName: Astronaut(Clone)
+      parentName: Astronaut 1(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0.000000057601163, z: 0.000000057601163, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FuelLight
+      parentName: Astronaut 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0.000000057601163, z: 0.000000057601163, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
@@ -437,7 +442,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 66ad4c095eb44014cb839b932049d1f3, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: e62392a852d7b80408d768dfee713b29, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1

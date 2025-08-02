@@ -33,4 +33,9 @@ public class Doorway : MonoBehaviour
             _enteredGameObject = null;
         }
     }
+
+    public void ResetGate()
+    {
+        _enteredGameObject = null;
+    }
 }
