@@ -23,12 +23,13 @@ E.g.:
 ## Added
 - ambient
 - impact
+    - soft whack, hollow-ish
 - motion
     - rewind: quick sound for when player is sucked back to start of level
 - special
     - phase: light source, moving through a light source?
-        - short echo
-        - longer reverb
+        - short echo / longer reverb
+        - in key / out of key
 - UI
 
 ## In progress
