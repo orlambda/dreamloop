@@ -46,7 +46,9 @@ E.g.:
     - hit orange orb, orb disappears (pop, small thud)
 - motion
     - jump
+    - sprint / boost (does this use fuel/jetpack?)
 - special
+    - item pickup
 - UI
     - click positive/select
     - click negative/back/cancel
