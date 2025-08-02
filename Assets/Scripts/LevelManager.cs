@@ -70,6 +70,11 @@ public class LevelManager : MonoBehaviour
 
     public void GoToNextLevel()
     {
+        if (_currentLevel != null)
+        {
+            _currentLevel.StopTimer();
+        }
+            
         if(_currentIndex == _finalIndex)
         {
             _timerText.text = "Nice " + _currentLevel.GetTimeLeft().ToString("F2");
