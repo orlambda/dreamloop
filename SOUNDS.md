@@ -23,7 +23,11 @@ E.g.:
 ## Added
 - ambient
 - impact
+    - running
+        - left and right foot slightly different
     - soft whack, hollow-ish
+    - hard thump - slightly gritty/grainy
+    - hard thump crisper
 - motion
     - rewind: quick sound for when player is sucked back to start of level
 - special
@@ -36,8 +40,6 @@ E.g.:
 - ambient
     - humming from orbs (louder when closer)
 - impact
-    - left foot running
-    - right foot running
     - land from jump
     - pass through red finishing line (reverby chord)
     - hit red starting line (lightsaber-ish?)
