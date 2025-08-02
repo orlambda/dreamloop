@@ -10,6 +10,7 @@ Sounds are split into categories:
 
 ## Requesting a sound
 Add a sound in the REQUESTS section, indented within its category
+Check added and in progress in case it is already planned
 Include any information such as length, materials, or anything that describes what's happening
 E.g.:
 - motion
