@@ -26,6 +26,9 @@ E.g.:
 - motion
     - rewind: quick sound for when player is sucked back to start of level
 - special
+    - phase: light source, moving through a light source?
+        - short echo
+        - longer reverb
 - UI
 
 ## In progress
