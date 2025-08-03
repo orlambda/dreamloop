@@ -37,6 +37,7 @@ E.g.:
     - phase: light source, moving through a light source?
         - short echo / longer reverb
         - in key / out of key
+    - finish level (reverby chords)
 - UI
     - score announcement (text appears): short and long
     - click positive/select
@@ -47,7 +48,6 @@ E.g.:
     - humming from orbs (louder when closer)
 - impact
     - land from jump
-    - pass through red finishing line (reverby chord)
 - motion
     - jump
     - sprint / boost (does this use fuel/jetpack?)
