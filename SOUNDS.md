@@ -34,6 +34,7 @@ E.g.:
 - motion
     - rewind: quick sound for when player is sucked back to start of level
     - jump
+    - boost (30 second loop - needs a fade out when boost ends?)
 - special
     - item pickup
     - phase: light source, moving through a light source?
@@ -50,7 +51,6 @@ E.g.:
     - humming from orbs (louder when closer)
 - impact
 - motion
-    - sprint / boost (does this use fuel/jetpack?)
 - special
 - UI
 
