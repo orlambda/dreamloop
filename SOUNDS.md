@@ -30,6 +30,7 @@ E.g.:
     - hard thump crisper
     - hit orange orb, orb disappears (pop, small thud)
     - hit red starting line (lightsaber-ish?)
+    - land from jump
 - motion
     - rewind: quick sound for when player is sucked back to start of level
 - special
@@ -47,7 +48,7 @@ E.g.:
 - ambient
     - humming from orbs (louder when closer)
 - impact
-    - land from jump
+
 - motion
     - jump
     - sprint / boost (does this use fuel/jetpack?)
