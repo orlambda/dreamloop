@@ -33,6 +33,7 @@ E.g.:
     - land from jump
 - motion
     - rewind: quick sound for when player is sucked back to start of level
+    - jump
 - special
     - item pickup
     - phase: light source, moving through a light source?
@@ -48,9 +49,7 @@ E.g.:
 - ambient
     - humming from orbs (louder when closer)
 - impact
-
 - motion
-    - jump
     - sprint / boost (does this use fuel/jetpack?)
 - special
 - UI
