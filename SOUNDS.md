@@ -31,6 +31,7 @@ E.g.:
 - motion
     - rewind: quick sound for when player is sucked back to start of level
 - special
+    - item pickup
     - phase: light source, moving through a light source?
         - short echo / longer reverb
         - in key / out of key
@@ -48,7 +49,6 @@ E.g.:
     - jump
     - sprint / boost (does this use fuel/jetpack?)
 - special
-    - item pickup
 - UI
     - click positive/select
     - click negative/back/cancel
