@@ -29,6 +29,7 @@ E.g.:
     - hard thump - slightly gritty/grainy
     - hard thump crisper
     - hit orange orb, orb disappears (pop, small thud)
+    - hit red starting line (lightsaber-ish?)
 - motion
     - rewind: quick sound for when player is sucked back to start of level
 - special
@@ -47,7 +48,6 @@ E.g.:
 - impact
     - land from jump
     - pass through red finishing line (reverby chord)
-    - hit red starting line (lightsaber-ish?)
 - motion
     - jump
     - sprint / boost (does this use fuel/jetpack?)
