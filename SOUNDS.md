@@ -36,6 +36,8 @@ E.g.:
         - short echo / longer reverb
         - in key / out of key
 - UI
+    - click positive/select
+    - click negative/back/cancel
 
 ## In progress
 - ambient
@@ -50,8 +52,6 @@ E.g.:
     - sprint / boost (does this use fuel/jetpack?)
 - special
 - UI
-    - click positive/select
-    - click negative/back/cancel
     - score announcement (text appears)
 
 ## REQUESTS
